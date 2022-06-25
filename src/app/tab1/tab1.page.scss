@@ -1,0 +1,46 @@
+ion-thumbnail {
+  height: 30vw;
+  width: 30vw;
+
+  background-color: #76af35;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px black;
+
+  margin-left: 13px;
+}
+ion-item {
+
+  box-shadow: 0 0 5px black;
+
+  --background: #8fd342;
+
+  border-radius: 10px;
+  margin: 0 10px;
+
+  h1 {
+    font-size: 7vw;
+    margin-left: 5px;
+  }
+
+  p{
+    font-size: 5vw;
+  }
+
+  ion-badge {
+    box-shadow: 0 0 2px black;
+    font-size: 4vw;
+  }
+}
+
+.pokeNome {
+  display: flex;
+  color:aliceblue;
+  text-shadow: 0 0 5px black;
+}
+
+.tipos{
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,17 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Pokedex
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list>
+
+    <ion-item>
+      <ion-thumbnail>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+      </ion-thumbnail>
+
+      <div>
+        <div class="pokeNome">
+          <h1>Bulbassauro</h1>
+          <p>#1</p>
+        </div>
+
+        <div class="tipos">
+          <ion-badge class="grama" mode="ios">Grama</ion-badge>
+          <ion-badge class="veneno" mode="ios">Veneno</ion-badge>
+        </div>
+
+      </div>
+    </ion-item>
+
+
+
+    <!--<ion-grid>
+      <ion-row>
+
+
+        <ion-col>
+          <ion-thumbnail>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+          </ion-thumbnail>
+        </ion-col>
+
+        <ion-col>
+          <div>
+            <div class="pokeNome">
+              <h1>Bulbassauro</h1>
+              <p>#1</p>
+            </div>
+            <div>
+
+              <ion-badge class="grama" mode="ios">Grama</ion-badge>
+              <ion-badge class="veneno" mode="ios">Veneno</ion-badge>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  -->
+  </ion-list>
+
 </ion-content>
