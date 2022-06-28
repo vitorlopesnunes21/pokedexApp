@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,15 +25,83 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-ion-toolbar{
+ion-toolbar {
   --background: #dd2121;
   color: white;
 }
 
-.grama{
+.grass {
   --background: rgb(40, 133, 11);
 }
 
-.veneno{
+.poison {
   --background: rgb(194, 18, 194);
+}
+
+.bug {
+  --background: rgb(114, 179, 94);
+}
+
+.dark {
+  --background: rgb(44, 33, 3);
+}
+
+.dragon {
+  --background: rgb(98, 0, 255);
+}
+
+.electric {
+  --background: rgb(255, 255, 0);
+  color: #000;
+}
+
+.fairy {
+  --background: rgb(245, 132, 245);
+}
+
+.fighting {
+  --background: rgb(219, 38, 38);
+}
+
+.fire {
+  --background: rgb(255, 136, 0);
+}
+
+.flying {
+  --background: rgb(143, 227, 241);
+
+}
+
+.ghost {
+  --background: rgb(112, 27, 112);
+}
+
+.ground {
+  --background: rgb(167, 109, 34);
+}
+
+.ice {
+  --background: rgb(0, 255, 255);
+  color: #000;
+}
+
+.normal {
+  --background: rgb(241, 241, 241);
+  color: #000;
+}
+
+.psychic {
+  --background: rgb(255, 0, 255);
+}
+
+.rock {
+  --background: rgb(90, 89, 89);
+}
+
+.steel {
+  --background: rgb(160, 157, 160);
+}
+
+.water {
+  --background: rgb(6, 143, 197);
 }

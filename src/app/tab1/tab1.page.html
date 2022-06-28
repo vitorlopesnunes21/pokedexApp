@@ -10,53 +10,28 @@
 
   <ion-list>
 
-    <ion-item>
+    <ion-item *ngFor="let pokemom of pokemons" [class]="pokemom.types[0] + 'T'">
       <ion-thumbnail>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+        <img [src]="pokemom.sprite">
       </ion-thumbnail>
 
       <div>
         <div class="pokeNome">
-          <h1>Bulbassauro</h1>
-          <p>#1</p>
+          <h1>{{pokemom.name}}</h1>
+          <p>#{{pokemom.id}}</p>
         </div>
 
         <div class="tipos">
-          <ion-badge class="grama" mode="ios">Grama</ion-badge>
-          <ion-badge class="veneno" mode="ios">Veneno</ion-badge>
+          <ion-badge mode="ios" *ngFor="let tipos of pokemom.types" [class]="tipos">{{tipos}}</ion-badge>
         </div>
 
       </div>
+
     </ion-item>
 
 
 
-    <!--<ion-grid>
-      <ion-row>
 
-
-        <ion-col>
-          <ion-thumbnail>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
-          </ion-thumbnail>
-        </ion-col>
-
-        <ion-col>
-          <div>
-            <div class="pokeNome">
-              <h1>Bulbassauro</h1>
-              <p>#1</p>
-            </div>
-            <div>
-
-              <ion-badge class="grama" mode="ios">Grama</ion-badge>
-              <ion-badge class="veneno" mode="ios">Veneno</ion-badge>
-            </div>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  -->
   </ion-list>
 
 </ion-content>
