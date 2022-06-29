@@ -11,12 +11,15 @@ ion-thumbnail {
 }
 ion-item {
 
+
+
   box-shadow: 0 0 5px black;
 
   --background: #8fd342;
 
   border-radius: 10px;
   margin: 0 10px;
+  margin-top: 10px;
 
   h1 {
     font-size: 7vw;
@@ -46,126 +49,126 @@ ion-item {
 
 
 .grassT {
-  --background: #76af35;
+  --background: rgb(50, 196, 5);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(40, 133, 11);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.bugT {
+  --background: #66bb06;
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(114, 179, 94);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.darkT {
+  --background: #3d351d;
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(44, 33, 3);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.dragonT {
+  --background: rgb(125, 62, 226);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(98, 0, 255);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.electricT {
+  --background: rgb(255, 255, 77);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(255, 255, 0);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.fairyT {
+  --background: rgb(255, 200, 255);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(245, 132, 245);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.fightingT {
+  --background: rgb(255, 71, 71);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(219, 38, 38);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.fireT {
+  --background: rgb(255, 156, 42);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(255, 136, 0);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.flyingT {
+  --background: rgb(206, 239, 245);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(143, 227, 241);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.ghostT {
+  --background: rgb(155, 74, 155);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(112, 27, 112);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.groundT {
+  --background: rgb(192, 138, 68);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(167, 109, 34);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.iceT {
+  --background: rgb(62, 224, 224);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(0, 255, 255);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.normalT {
+  --background: rgb(202, 199, 199);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(241, 241, 241);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.poisonT {
+  --background: rgb(185, 62, 185);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(194, 18, 194)2;
   }
 }
 
-.grassT {
-  --background: #76af35;
+.psychicT {
+  --background: rgb(243, 76, 243);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(255, 0, 255);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.rockT {
+  --background: rgb(139, 137, 137);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(90, 89, 89);
   }
 }
-.grassT {
-  --background: #76af35;
+.steelT {
+  --background: rgb(202, 197, 202);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(160, 157, 160);
   }
 }
 
-.grassT {
-  --background: #76af35;
+.waterT {
+  --background: rgb(63, 176, 221);
   ion-thumbnail{
-    background-color: #8fd342;
+    background-color: rgb(6, 143, 197);
   }
 }
