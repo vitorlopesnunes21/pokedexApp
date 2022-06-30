@@ -23,7 +23,7 @@ ion-item {
 
   h1 {
     font-size: 7vw;
-    margin-left: 5px;
+    margin-left: 10vw;
   }
 
   p{
@@ -63,7 +63,7 @@ ion-item {
 }
 
 .darkT {
-  --background: #3d351d;
+  --background: #52482c;
   ion-thumbnail{
     background-color: rgb(44, 33, 3);
   }
@@ -140,9 +140,9 @@ ion-item {
 }
 
 .poisonT {
-  --background: rgb(185, 62, 185);
+  --background: rgb(170, 86, 170);
   ion-thumbnail{
-    background-color: rgb(194, 18, 194)2;
+    background-color: rgb(194, 18, 194);
   }
 }
 
