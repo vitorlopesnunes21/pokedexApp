@@ -1,21 +1,17 @@
+
 ion-thumbnail {
   height: 30vw;
   width: 30vw;
 
-
   border-radius: 50%;
 
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 13px black;
 
-  margin-left: 13px;
+  margin-left: 10px;
+
 }
 ion-item {
-
-
-
   box-shadow: 0 0 5px black;
-
-  --background: #8fd342;
 
   border-radius: 10px;
   margin: 0 10px;
@@ -23,10 +19,10 @@ ion-item {
 
   h1 {
     font-size: 7vw;
-    margin-left: 10vw;
+    margin-left: 5vw;
   }
 
-  p{
+  p {
     font-size: 5vw;
   }
 
@@ -36,139 +32,171 @@ ion-item {
   }
 }
 
+  .accordion{
+    border-radius: 10px;
+    margin: -10px 5vw 0;
+    font-size: 4.5vw;
+  }
+
 .pokeNome {
   display: flex;
-  color:aliceblue;
+  color: aliceblue;
   text-shadow: 0 0 5px black;
 }
 
-.tipos{
+.tipos {
   display: flex;
   justify-content: space-around;
-}
 
+}
 
 .grassT {
   --background: rgb(50, 196, 5);
-  ion-thumbnail{
+  background-color: rgb(40, 133, 11);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(40, 133, 11);
   }
 }
 
 .bugT {
   --background: #66bb06;
-  ion-thumbnail{
+  background-color: rgb(114, 179, 94);
+  ion-thumbnail {
     background-color: rgb(114, 179, 94);
   }
 }
 
 .darkT {
   --background: #52482c;
-  ion-thumbnail{
+  background-color: rgb(44, 33, 3);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(44, 33, 3);
   }
 }
 
 .dragonT {
   --background: rgb(125, 62, 226);
-  ion-thumbnail{
+background-color: rgb(98, 0, 255);
+color: #fff;
+  ion-thumbnail {
     background-color: rgb(98, 0, 255);
   }
 }
 
 .electricT {
   --background: rgb(255, 255, 77);
-  ion-thumbnail{
+  background-color: rgb(255, 255, 0);
+  ion-thumbnail {
     background-color: rgb(255, 255, 0);
   }
 }
 
 .fairyT {
   --background: rgb(255, 200, 255);
-  ion-thumbnail{
+  background-color: rgb(245, 132, 245);
+  ion-thumbnail {
     background-color: rgb(245, 132, 245);
   }
 }
 
 .fightingT {
   --background: rgb(255, 71, 71);
-  ion-thumbnail{
+  background-color: rgb(219, 38, 38);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(219, 38, 38);
   }
 }
 
 .fireT {
   --background: rgb(255, 156, 42);
-  ion-thumbnail{
+  background-color: rgb(255, 136, 0);
+  ion-thumbnail {
     background-color: rgb(255, 136, 0);
   }
 }
 
 .flyingT {
   --background: rgb(206, 239, 245);
-  ion-thumbnail{
+  background-color: rgb(143, 227, 241);
+  ion-thumbnail {
     background-color: rgb(143, 227, 241);
   }
 }
 
 .ghostT {
   --background: rgb(155, 74, 155);
-  ion-thumbnail{
+  background-color: rgb(112, 27, 112);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(112, 27, 112);
   }
 }
 
 .groundT {
   --background: rgb(192, 138, 68);
-  ion-thumbnail{
+  background-color: rgb(167, 109, 34);
+  ion-thumbnail {
     background-color: rgb(167, 109, 34);
   }
 }
 
 .iceT {
   --background: rgb(62, 224, 224);
-  ion-thumbnail{
+  background-color: rgb(0, 255, 255);
+  ion-thumbnail {
     background-color: rgb(0, 255, 255);
   }
 }
 
 .normalT {
   --background: rgb(202, 199, 199);
-  ion-thumbnail{
+  background-color: rgb(241, 241, 241);
+  ion-thumbnail {
     background-color: rgb(241, 241, 241);
   }
 }
 
 .poisonT {
   --background: rgb(170, 86, 170);
-  ion-thumbnail{
+  background-color: rgb(194, 18, 194);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(194, 18, 194);
   }
 }
 
 .psychicT {
   --background: rgb(243, 76, 243);
-  ion-thumbnail{
+  background-color: rgb(255, 0, 255);
+  ion-thumbnail {
     background-color: rgb(255, 0, 255);
   }
 }
 
 .rockT {
   --background: rgb(139, 137, 137);
-  ion-thumbnail{
+  background-color: rgb(90, 89, 89);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(90, 89, 89);
   }
 }
 .steelT {
   --background: rgb(202, 197, 202);
-  ion-thumbnail{
+  background-color: rgb(160, 157, 160);
+  ion-thumbnail {
     background-color: rgb(160, 157, 160);
   }
 }
 
 .waterT {
   --background: rgb(63, 176, 221);
-  ion-thumbnail{
+  background-color: rgb(6, 143, 197);
+  color: #fff;
+  ion-thumbnail {
     background-color: rgb(6, 143, 197);
   }
 }

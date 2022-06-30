@@ -1,37 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Pokedex
-    </ion-title>
+    <ion-title> Pokedex </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <ion-list>
+    <ion-accordion-group>
+      <ion-accordion [value]="pokemom.id" *ngFor="let pokemom of pokemons">
+        <ion-item slot="header" [class]="pokemom.types[0] + 'T'">
+          <ion-thumbnail>
+            <img [src]="pokemom.sprite" />
+          </ion-thumbnail>
+          <div>
+            <div class="pokeNome">
+              <h1>{{pokemom.name}}</h1>
+              <p>#{{pokemom.id}}</p>
+            </div>
 
-    <ion-item *ngFor="let pokemom of pokemons" [class]="pokemom.types[0] + 'T'">
-      <ion-thumbnail>
-        <img [src]="pokemom.sprite">
-      </ion-thumbnail>
-
-      <div>
-        <div class="pokeNome">
-          <h1>{{pokemom.name}}</h1>
-          <p>#{{pokemom.id}}</p>
-        </div>
-
-        <div class="tipos">
-          <ion-badge mode="ios" *ngFor="let tipos of pokemom.types" [class]="tipos">{{tipos}}</ion-badge>
-        </div>
-
-      </div>
-
-    </ion-item>
-
-
-
-
+            <div class="tipos">
+              <ion-badge
+                mode="ios"
+                *ngFor="let tipos of pokemom.types"
+                [class]="tipos"
+                >{{tipos}}</ion-badge
+              >
+            </div>
+          </div>
+        </ion-item>
+        <div [class]="'ion-padding ' + 'accordion ' + pokemom.types[0] + 'T' " slot="content">{{pokemom.name}} Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
   </ion-list>
-
 </ion-content>
