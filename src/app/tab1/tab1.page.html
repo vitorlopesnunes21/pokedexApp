@@ -5,6 +5,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-searchbar></ion-searchbar>
   <ion-list>
     <ion-accordion-group>
       <ion-accordion [value]="pokemom.id" *ngFor="let pokemom of pokemons">
@@ -32,4 +34,5 @@
       </ion-accordion>
     </ion-accordion-group>
   </ion-list>
+
 </ion-content>
