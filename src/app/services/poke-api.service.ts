@@ -5,19 +5,34 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PokeApiService {
+  pokemons: any[] = [];
+
+  private index = 1;
+  private readonly offset = 6;
+  private totalPokemons = 905;
+
   constructor(private http: HttpClient) {}
 
-  getPokeDados() {}
+  getPokeDados() {
+    this.getPokeApi();
+    return this.pokemons;
+  }
 
   async getPokeApi() {
-    // eslint-disable-next-line prefer-const
-    let pokemons = [];
-
-    for (let id = 1; id <= 905; id++) {
+    if(this.index >= this.totalPokemons){
+      return;
+    }
+    for (let id = this.index; id < this.index + this.offset; id++) {
       await this.http
         .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        .toPromise().then((data: any) => pokemons[id-1] = data);
+        .toPromise()
+        .then((data: any) => {
+          if (data === null) {
+            return;
+          }
+          this.pokemons[id - 1] = data;
+        });
     }
-    return pokemons;
+    this.index += this.offset;
   }
 }

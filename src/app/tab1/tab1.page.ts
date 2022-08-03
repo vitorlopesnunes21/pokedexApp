@@ -1,20 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from '../services/poke-api.service';
 
-
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
 })
-export class Tab1Page implements OnInit{
+export class Tab1Page implements OnInit {
+  public pokemons: any[] = [];
 
-
-  pokemons = [];
+  private loading = false;
 
   constructor(private pokeApiService: PokeApiService) {}
 
-  ngOnInit(): void {
-    this.pokemons = this.pokeApiService.getPokeApi();
+  async ngOnInit() {
+    this.getPokemons();
+  }
+
+  async getPokemons() {
+    this.pokemons = await this.pokeApiService.getPokeDados();
+  }
+
+  async loadData(event) {
+
+    if (this.loading === true) {
+      return;
+    }
+    this.loading = true;
+    await this.getPokemons();
+    this.loading = false;
+    event.target.complete();
   }
 }
