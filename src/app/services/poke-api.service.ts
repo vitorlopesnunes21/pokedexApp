@@ -13,13 +13,13 @@ export class PokeApiService {
 
   constructor(private http: HttpClient) {}
 
-  getPokeDados() {
-    this.getPokeApi();
+  async getPokeDados() {
+    await this.getPokeApi();
     return this.pokemons;
   }
 
   async getPokeApi() {
-    if(this.index >= this.totalPokemons){
+    if (this.index >= this.totalPokemons) {
       return;
     }
     for (let id = this.index; id < this.index + this.offset; id++) {
@@ -34,5 +34,17 @@ export class PokeApiService {
         });
     }
     this.index += this.offset;
+  }
+
+  async getPokebyName(name: string) {
+
+    let dataPoke;
+    await this.http
+        .get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        .toPromise()
+        .then((data: any) => {
+         dataPoke = data;
+        });
+        return dataPoke;
   }
 }

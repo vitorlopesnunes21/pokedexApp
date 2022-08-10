@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar (search)="pesquisar($event)" [(ngModel)]="valorSearch"></ion-searchbar>
 
   <ion-list>
     <ion-accordion-group>
@@ -47,6 +47,6 @@
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 
-  <p>Aguardando a nova geração ...</p>
+  <p style="text-align: center;">Aguardando a nova geração ...</p>
 
 </ion-content>

@@ -9,6 +9,7 @@ import { PokeApiService } from '../services/poke-api.service';
 export class Tab1Page implements OnInit {
   public pokemons: any[] = [];
 
+  public valorSearch: string;
   private loading = false;
 
   constructor(private pokeApiService: PokeApiService) {}
@@ -22,7 +23,6 @@ export class Tab1Page implements OnInit {
   }
 
   async loadData(event) {
-
     if (this.loading === true) {
       return;
     }
@@ -30,5 +30,11 @@ export class Tab1Page implements OnInit {
     await this.getPokemons();
     this.loading = false;
     event.target.complete();
+  }
+
+  async pesquisar(event) {
+   if(this.valorSearch && this.valorSearch.trim( ) !== ''){
+    console.log(await this.pokeApiService.getPokebyName(this.valorSearch));
+   }
   }
 }
