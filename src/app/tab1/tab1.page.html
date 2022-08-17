@@ -5,12 +5,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar (search)="pesquisar($event)" [(ngModel)]="valorSearch"></ion-searchbar>
+  <ion-searchbar
+    (search)="pesquisar($event)"
+    [(ngModel)]="valorSearch"
+  ></ion-searchbar>
 
   <ion-list>
     <ion-accordion-group>
       <ion-accordion [value]="pokemom.id" *ngFor="let pokemom of pokemons">
-        <ion-item slot="header" [class]="pokemom.types[0].type.name + 'T'">
+        <ion-item slot="header" [class]="pokemom.types[0].type.name + 'T'" (click)="pokeFraqueza(pokemom.types)">
           <ion-thumbnail>
             <ion-img [src]="pokemom.sprites.front_default"></ion-img>
           </ion-thumbnail>
@@ -35,6 +38,18 @@
           slot="content"
         >
           {{pokemom.name}} Content
+
+          <h2 class="fraqueza">Fraquezas: </h2>
+          <ion-badge
+                mode="ios"
+                *ngFor="let tipos of fraquezas"
+                [class]="tipos.name"
+                >{{tipos.name}}</ion-badge
+              >
+
+              <p class="verMais"><ion-button >
+                ver mais
+              </ion-button></p>
         </div>
       </ion-accordion>
     </ion-accordion-group>
@@ -43,10 +58,10 @@
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content
       loadingSpinner="crescent"
-      loadingText="Carregando...">
+      loadingText="Carregando..."
+    >
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 
-  <p style="text-align: center;">Aguardando a nova geração ...</p>
-
+  <p style="text-align: center">Aguardando a nova geração ...</p>
 </ion-content>

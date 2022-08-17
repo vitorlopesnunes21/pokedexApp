@@ -1,4 +1,3 @@
-
 ion-thumbnail {
   height: 30vw;
   width: 30vw;
@@ -8,7 +7,6 @@ ion-thumbnail {
   box-shadow: 0 0 13px black;
 
   margin-left: 10px;
-
 }
 ion-item {
   box-shadow: 0 0 5px black;
@@ -32,11 +30,19 @@ ion-item {
   }
 }
 
-  .accordion{
-    border-radius: 10px;
-    margin: -10px 5vw 0;
-    font-size: 4.5vw;
-  }
+.fraqueza {
+  border-top: 1px solid black;
+  padding-top: 1.5vh;
+}
+
+.verMais{
+  text-align: center;
+}
+.accordion {
+  border-radius: 10px;
+  margin: -10px 5vw 0;
+  font-size: 4.5vw;
+}
 
 .pokeNome {
   display: flex;
@@ -47,7 +53,6 @@ ion-item {
 .tipos {
   display: flex;
   justify-content: space-around;
-
 }
 
 .grassT {
@@ -78,8 +83,8 @@ ion-item {
 
 .dragonT {
   --background: rgb(125, 62, 226);
-background-color: rgb(98, 0, 255);
-color: #fff;
+  background-color: rgb(98, 0, 255);
+  color: #fff;
   ion-thumbnail {
     background-color: rgb(98, 0, 255);
   }

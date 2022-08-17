@@ -47,4 +47,40 @@ export class PokeApiService {
         });
         return dataPoke;
   }
+
+  async getFraqueza(type: string) {
+
+    let dataPoke;
+    await this.http
+        .get(`https://pokeapi.co/api/v2/type/${type}`)
+        .toPromise()
+        .then((data: any) => {
+         dataPoke = data.damage_relations.double_damage_from;
+        });
+        return dataPoke;
+  }
+
+  async getMetade(type: string) {
+
+    let dataPoke;
+    await this.http
+        .get(`https://pokeapi.co/api/v2/type/${type}`)
+        .toPromise()
+        .then((data: any) => {
+         dataPoke = data.damage_relations.half_damage_from;
+        });
+        return dataPoke;
+  }
+
+  async getNulo(type: string) {
+
+    let dataPoke;
+    await this.http
+        .get(`https://pokeapi.co/api/v2/type/${type}`)
+        .toPromise()
+        .then((data: any) => {
+         dataPoke = data.damage_relations.no_damage_from;
+        });
+        return dataPoke;
+  }
 }

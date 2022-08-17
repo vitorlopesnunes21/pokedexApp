@@ -8,6 +8,7 @@ import { PokeApiService } from '../services/poke-api.service';
 })
 export class Tab1Page implements OnInit {
   public pokemons: any[] = [];
+  public fraquezas: any[] = [];
 
   public valorSearch: string;
   private loading = false;
@@ -36,5 +37,57 @@ export class Tab1Page implements OnInit {
    if(this.valorSearch && this.valorSearch.trim( ) !== ''){
     console.log(await this.pokeApiService.getPokebyName(this.valorSearch));
    }
+  }
+
+  async pokeFraqueza(types){
+    this.fraquezas=[];
+    if (types[1]){
+      for(const type of await this.pokeApiService.getFraqueza(types[0].type.name)){
+        let verificacao = true;
+        for(const aaa of await this.pokeApiService.getFraqueza(types[1].type.name)){
+          if (aaa.name === type.name){
+            verificacao = false;
+          }
+        }
+        for(const aaa of await this.pokeApiService.getMetade(types[1].type.name)){
+          if (aaa.name === type.name){
+            verificacao = false;
+          }
+        }
+        for(const aaa of await this.pokeApiService.getNulo(types[1].type.name)){
+          if (aaa.name === type.name){
+            verificacao = false;
+          }
+        }
+        if(verificacao){
+          this.fraquezas.push(type);
+        }
+      }
+
+      for(const type of await this.pokeApiService.getFraqueza(types[1].type.name)){
+        let verificacao = true;
+        for(const aaa of await this.pokeApiService.getFraqueza(types[0].type.name)){
+          if (aaa.name === type.name){
+            verificacao = false;
+          }
+        }
+        for(const aaa of await this.pokeApiService.getMetade(types[0].type.name)){
+          if (aaa.name === type.name){
+            verificacao = false;
+          }
+        }
+        for(const aaa of await this.pokeApiService.getNulo(types[0].type.name)){
+          if (aaa.name === type.name){
+            verificacao = false;
+          }
+        }
+        if(verificacao){
+          this.fraquezas.push(type);
+        }
+      }
+    }
+    else {
+      this.fraquezas.push(...( await this.pokeApiService.getFraqueza(types[0].type.name)));
+    }
   }
 }
